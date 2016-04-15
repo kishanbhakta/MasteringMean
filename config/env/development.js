@@ -5,5 +5,10 @@ module.exports = {
     clientId: '698177743653545',
     clientSecret: '8440ba1f85b6d905ff84be1912172e5c',
     callbackURL: 'http://localhost:3000/oauth/facebook/callback'
+  },
+  twitter: {
+    clientID: 'vXVWYbhgkRUDx8B38yPH1FmbY',
+    clientSecret: 'hvah4bYypDZuf3X2D8srYceMdHFDqSs9gcPA8RzgWUUe64DLv8',
+    callbackURL: 'http://localhost:3000/oauth/twitter/callback'
   }
 };
