@@ -72,8 +72,6 @@ exports.signout = function(req, res) {
   res.redirect('/');
 };
 
-/* Handling OAuth User Creation */
-
 exports.saveOAuthUserProfile = function(req, profile, done) {
   User.findOne({
     provider: profile.provider,

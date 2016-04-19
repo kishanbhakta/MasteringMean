@@ -1,7 +1,6 @@
 var mongoose = require('mongoose'),
     Article = mongoose.model('Article');
 
-
 var getErrorMessage = function(err) {
   if (err.errors) {
     for (var errName in err.errors) {
@@ -28,7 +27,7 @@ exports.create = function(req, res) {
 };
 
 exports.list = function(req, res) {
-  Article.find().sort('-created').populate('creator', 'firstName lastName fullName').exec(function(err, articles) {
+  Article.find().sort('-created').populate('creator', 'firstName   lastName fullName').exec(function(err, articles) {
     if (err) {
       return res.status(400).send({
         message: getErrorMessage(err)
@@ -57,7 +56,7 @@ exports.update = function(req, res) {
   var article = req.article;
 
   article.title = req.body.title;
-  article.content =  req.body.content;
+  article.content = req.body.content;
 
   article.save(function(err) {
     if (err) {
