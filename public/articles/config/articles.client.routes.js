@@ -1,3 +1,4 @@
+// Configure the 'articles' module routes
 angular.module('articles').config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
